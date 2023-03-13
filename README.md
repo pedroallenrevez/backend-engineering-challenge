@@ -47,6 +47,12 @@ poetry run unbabel generate_benchmark
 poetry run unbabel benchmark
 ```
 
+Run the application for a given input file, with our algorithm:
+```
+poetry run unbabel calculate input.txt output.txt --window-size 10 --strategy algo
+```
+(`strategy` alternatives [pandas|algo])
+
 Start the database and API service:
 ```
 docker-compose up
