@@ -36,6 +36,8 @@ pip install poetry
 poetry install
 ```
 
+> NOTE: Due to the application not being produced into a Python packaged, but instead being used inside a poetry environment, commands need to be run in the source root of the project in order to work. 
+
 Run tests:
 ```
 poetry run pytest
