@@ -1,13 +1,15 @@
 import datetime
 import json
 from pathlib import Path
-from typing import Iterable, List, Optional, Tuple
+from typing import Iterable, List, Optional, Tuple, Union
 
 import pandas as pd
 
 JSONString = str
-TimeData = Tuple[(datetime.datetime | pd.Timestamp), (float | int)]
-JsonValidTimeData = Tuple[str, (float | int)]
+Number = Union[float, int]
+TimeStamp = Union[datetime.datetime, pd.Timestamp]
+TimeData = Tuple[TimeStamp, Number]
+JsonValidTimeData = Tuple[str, Number]
 
 
 def txt_to_csv(txt: str) -> pd.DataFrame:
@@ -59,7 +61,7 @@ def rightmostts(ts: datetime.datetime) -> datetime.datetime:
 
 
 def produce_json(
-    date: (datetime.datetime | pd.Timestamp), duration: float
+    date: TimeStamp, duration: float
 ) -> JSONString:
     """Produce a Json string to be appended to a file
 
@@ -73,7 +75,7 @@ def produce_json(
     return json.dumps(produce_dict(str(date), duration))
 
 
-def produce_dict(date: (datetime.datetime | pd.Timestamp), duration: float) -> dict:
+def produce_dict(date: TimeStamp, duration: float) -> dict:
     """Produce a dict with date and average_delivery_time keys.
 
     Args:
