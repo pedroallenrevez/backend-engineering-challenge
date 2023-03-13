@@ -4,8 +4,6 @@ from enum import Enum
 import pandas as pd
 from pydantic import BaseModel, NonNegativeFloat, PositiveInt
 
-# from uuid import UUID
-
 
 class Languages(str, Enum):
     EN = "en"
@@ -26,25 +24,16 @@ class Event(str, Enum):
 
 class TranslationEvent(BaseModel):
     """Data-model for a translation event message.
-
-    Args:
-        BaseModel (_type_): _description_
-
-    TODO:
-        - [x] Positive duration, nr words
-        - [x] UUID
-        - [ ] Optional pandas
     """
 
-    timestamp: pd.Timestamp  # 2018-12-26 18:12:19.903159,
-    # timestamp: datetime #2018-12-26 18:12:19.903159,
+    timestamp: pd.Timestamp
     translation_id: str  # 5aa5b2f39f7254a75aa4,
-    source_language: Languages  # en,
-    target_language: Languages  # fr,
-    client_name: Client  # airliberty,
-    event_name: Event  # translation_delivered,
+    source_language: Languages 
+    target_language: Languages
+    client_name: Client
+    event_name: Event
 
-    duration: PositiveInt  # In minutes #20,
+    duration: PositiveInt
     nr_words: PositiveInt
 
     @classmethod

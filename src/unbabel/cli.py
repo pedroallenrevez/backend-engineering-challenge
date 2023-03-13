@@ -55,7 +55,6 @@ def generate_benchmark():
 
 @app.command()
 def calculate(
-    # input_file: Optional[Path] = None,
     input_file: Path,
     output_file: Path,
     window_size: int = 10,
