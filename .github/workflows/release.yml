@@ -19,10 +19,10 @@ jobs:
     name: Build Docker image 
     steps:
       - 
-      uses: docker/build-push-action@v4.0.0
-      with:
-        file: ./src/Dockerfile
-        push: false
-        tags: pedroallenrevez/unbabel:latest
+        uses: docker/build-push-action@v4.0.0
+        with:
+          file: ./src/Dockerfile
+          push: false
+          tags: pedroallenrevez/unbabel:latest
 
 
