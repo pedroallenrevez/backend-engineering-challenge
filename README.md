@@ -152,18 +152,16 @@ This simplistic approach has a couple of downsides though:
 1. Can be optimized to look for next observations within the same bin, avoiding unnecessary productions and works.
 2. If the observations are too granular, and the window size too big, some memory problems might occur.
 
-======================================================
-Algorithm complexity analysis: `O(n)`
-======================================================
 
-### Solution 3 - Optimizations using `numpy`
+## Further Optimizations
+### Using with Numpy
 
 Solution 2 implements a simple algorithmic approach in pure python.
 This can be sped up, since `numpy` uses `cython` hooks to improve computation times.
 This means that the values themselves are translated into `C` objects.
 Thus, our buffer stack arrays and calculations involving them can be improved by using these base-constructs.
 
-### Solution 4 - Same bin optimizations
+### Same bin optimizations
 
 In the case of receiving samples that are incuded on the same bin, the algorithm would perform a lot of wasteful computations,
 that would have to be upserted to the database.
@@ -172,13 +170,15 @@ be a lot of wasteful productions for this bin, that would have to be updated (up
 
 So instead of running our algorithm at every sample, we would fill a 1-min buffer bin with these samples.
 
-### Solution 5 - Do not do it in Python...
+### Do not do it in Python...
 
 By simply implementing the algorithm in a language like `Go` or `Rust`,
 computation times can be greatly increased, since `Python` is an interpreted language,
 whereas `Go` and `Rust` are compiled and optimized.
 
-### Benchmarking Algorithms
+## Benchmarking Algorithms
+
+Read the introduction section on how to run the benchmark and generate input files for it.
 
 | (in seconds)    | Pandas | Algo   |
 | --------------- | ------ | ------ |
@@ -195,76 +195,6 @@ Considerations & Optimizations:
 - We are upserting each row individually, of course, if done in bulk, DB interaction times will improve, and be faster;
 - Simplified interaction with DB with `psycopg2`. More advanced and complex DB models, could use `sqlalchemy` to manage relations.
 
-## Roadmap
-
-Base Code
-
-- [x] This Design Document quick-start (1H);
-- [x] Do a Nix dev environment, with all needed dependencies (30m);
-- [x] Prepare base backend-code of the two algorithms (4h);
-- [x] Create benchmark test-bed for calcuation code(1h);
-  - [x] Generation of test_size data
-  - [x] Time execution
-  - [x] Do benchmark for each
-- [-] Structure code with pydantic models (15m).
-  - [x] Models
-  - [-] Implement code using models
-- [x] Implement the CLI for the command (15m).
-- [x] Have a CLI test script that processes a file with the 3 algorithms (5m).
-- [x] Test Sliding window
-  - [x] Base case
-  - [x] Case with lots of timestamps within the same bin
-  - [x] Case next observation is not within the time-window
-  - [x] test against pandas
-- [x] Write about the algorithm
-- [x] Quality pass
-  - [x] Typing, documentation
-  - [x] refactor sliding window code and test code
-  - [x] refactor sliding window consume function. otherwise the streaming function will not work
-  - [-] pydantic code???
-  - [x] conftest
-- [x] fix tests
-
-Service
-
-- [x] Build server with psql, FastAPI, and webscokets
-  - [x] create database code
-  - [x] ingest a point to the database
-  - [-] query code
-  - [x] psql connector
-  - [x] upserts
-  - [-] FastAPI with CRUD
-  - [x] FastAPI with websockets extension
-  - [x] create websocket request on pkg
-  - [x] separate code from pkg and server
-  - [x] sliding window code packaged in server dockerfile
-  - [x] API docker image
-- [-] refactor out first and last
-
-
-
-CI & Packaging
-
-- [ ] Review code quality and documentation.
-  - [x] ensure poetry entrypoints for script
-  - [x] code is copied to serverside
-  - [ ] do some logs server-side
-  - [ ] still not packaged
-  - [ ] recheck all code functionality
-- [ ] Build introduction section on building and testing the code (15m).
-- [ ] Iterate document and solutions, detailed explanation. Algo section rewrite
-- [ ] Python poetry package (extra: with Nix).
-- [ ] CI/CD with Github action (extra: with Nix).
-- [x] Implement docker-compose running the app
-- [x] Figure out how to use lefthook to commit to git, fork repo, and commit (30m).
-- [-] Install scripts for nix environment (10m).
-
-Extra
-
-- [ ] React chakra front-end
 
 ## Conclusions
 
-## Notes, TODOS, & questions
-
-- How to keep poetry and nix dependencies separate, and how to keep the dev environment separated from poetry (think integration with `treefmt`).
