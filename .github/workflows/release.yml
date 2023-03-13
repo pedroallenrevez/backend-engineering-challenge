@@ -25,6 +25,7 @@ jobs:
         name: DockerBuild
         uses: docker/build-push-action@v4.0.0
         with:
+          context: ./src
           file: ./src/Dockerfile
           push: false
           tags: pedroallenrevez/unbabel:latest
