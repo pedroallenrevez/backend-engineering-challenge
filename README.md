@@ -16,7 +16,7 @@ that will stream these events, to be calculated and consumed by a database.
 - Build a python package with a CLI that allows calculating sliding window moving averages of translation events durations.
 - Have proper dev environment, testing, benchmarking, and good code-conduct.
 - Showcase planning, and means of communication.
-- Showcase systems-engineering by implementing the problem as a micro-service, with a message queue, and saving the metric somewhere.
+- Showcase systems-engineering by implementing the problem as a micro-service, with websockets, and saving the metric somewhere.
 - Showcase personal development with Nix.
 
 ### Non-Goals
@@ -25,9 +25,7 @@ that will stream these events, to be calculated and consumed by a database.
 
 ### Extra Personal Goals
 
-1. Use Nix to build the python package;
-2. " " declare CI/CD.
-3. Learn websockets (w/ FastAPI)
+1. Learn websockets (w/ FastAPI)
 
 ## Usage Guide
 
@@ -43,9 +41,10 @@ Run tests:
 poetry run pytest
 ```
 
-Generate benchmark files:
+Generate benchmark files and run benchmark:
 ```
 poetry run unbabel generate_benchmark
+poetry run unbabel benchmark
 ```
 
 Start the database and API service:
