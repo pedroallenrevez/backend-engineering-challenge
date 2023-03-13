@@ -18,7 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Docker image 
     steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
       - 
+        name: DockerBuild
         uses: docker/build-push-action@v4.0.0
         with:
           file: ./src/Dockerfile
