@@ -31,10 +31,6 @@ def generate(
     test_size: int = 1000,
 ):
     """Generate a file with given size, of translation event data.
-
-    Args:
-        output_file (Path): _description_
-        test_size (int, optional): _description_. Defaults to 1000.
     """
     print(f"Generating an input file with size {test_size}")
 
@@ -45,6 +41,8 @@ def generate(
 
 @app.command()
 def generate_benchmark():
+    """Generate benchmark files, for sizes 1K, 10K, 100K and 1M.
+    """
     for output_file, test_size in [
         ("dev/input_1K.txt", 1000),
         ("dev/input_10K.txt", 10000),
@@ -79,7 +77,7 @@ def calculate(
 
 @app.command()
 def benchmark():
-    """Benchmark the algorithms versus the various file sizes."""
+    """Benchmark the algorithms versus the various file sizes. Use generate-benchmark before-hand."""
     results: Dict[Tuple[Strategy, str], float] = {}
     for strat in [Strategy.PANDAS, Strategy.ALGO]:
         for input_file in [
@@ -104,12 +102,6 @@ def benchmark():
 async def ingestws(
     test_size: int = 1000,
 ):
-    """Generates random events, calculates statistics and ingests them to
-    a Postgres database.
-
-    For now keep the windowing code client-side to test the server.
-    Then move the code to server-side, and modify needed optimizations.
-    """
     # window = SlidingWindow(window_size)
     async with websockets.connect("ws://localhost:8000/ws") as websocket:
         for i, d in enumerate(TranslationEvent.generate(size=test_size)):
@@ -122,6 +114,9 @@ async def ingestws(
 def ingest(
     test_size: int = 1000,
 ):
+    """Generates random events, calculates statistics and ingests them to
+    a Postgres database.
+    """
     asyncio.get_event_loop().run_until_complete(ingestws(test_size))
 
 def main():

@@ -41,9 +41,29 @@ Run tests:
 poetry run pytest
 ```
 
+Use the CLI application:
+```
+poetry run unbabel
+                                                                                                                                              
+ Usage: unbabel [OPTIONS] COMMAND [ARGS]...                                                                                                   
+                                                                                                                                              
+╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell.                                                                    │
+│ --show-completion             Show completion for the current shell, to copy it or customize the installation.                             │
+│ --help                        Show this message and exit.                                                                                  │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ benchmark                Benchmark the algorithms versus the various file sizes. Use generate-benchmark before-hand.                       │
+│ calculate                Calculate moving-averages over an input file.                                                                     │
+│ generate                 Generate a file with given size, of translation event data.                                                       │
+│ generate-benchmark       Generate benchmark files, for sizes 1K, 10K, 100K and 1M.                                                         │
+│ ingest                   Generates random events, calculates statistics and ingests them to a Postgres database.                           │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+```
+
 Generate benchmark files and run benchmark:
 ```
-poetry run unbabel generate_benchmark
+poetry run unbabel generate-benchmark
 poetry run unbabel benchmark
 ```
 
