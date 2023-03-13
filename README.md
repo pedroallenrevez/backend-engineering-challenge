@@ -82,7 +82,7 @@ The whole stack if comprised of three components:
   - `typer` for CLI, and command line niceties
   - `fastapi` and `websockets` for the API
   - `pandas` for baseline solutions on rolling-window averages
-  - `pydantic` for data-model validation, and databse ORM modelling
+  - `pydantic` for data-model validation, and databse ORM modelling (although not used in our service, due to performance. It should be used to validate the event generated data, and by the time it reaches the calculation service, it should be assumed to be correct)
 
 - development environment
   - `black`, `isort` and `treefmt` (included in the Nix devshell environment presets)
@@ -121,8 +121,7 @@ all observations within those 10 minutes.
 This algorithm makes use of two buffers that maintain state, and keep the needed information to a minimum.
 
 1. `stack` - the stack holds the observation values themselves, in order to calculate the statistic (in this case, an average);
-2. `diffs` - the time-difference buffer holds the difference in time (timedelta) between seen observations. With this, we can avoid
-   storing useless timestamp data, for multiple points.
+2. `tss` - the stack that holds seen timestamps, within our time-window.
 
 This algorithm uses the following terminology:
 
@@ -134,16 +133,16 @@ This algorithm uses the following terminology:
 The sliding window algorithm, consumes 1 sample at a time:
 
 1. An observation is read from a stream/file;
-2. The stack is filled with the observation value, and the timedelta calculated from the timestamp (relative to previous observation);
+2. The stack is filled with the observation value, with duration and timestamp.
 3. Forward fill 1 min timestamps are generated until the leftmost timestamp of the current observed timestamp, and statistic calculated from the current state of the stack;
 4. Rinse and repeat.
 
 A couple notes on the algorithm:
 
 - First and last observations are special cases.
-  - The first observation, that initiates the algorithm will always be 0-valued.
-  - Given that the algorithm produces the statistics all the way until the next-observation, it means that the last statistic will not be calculated within normal iterations of the algorithm. This means that we "manually" flush the buffer at the end of the iteration, if we want to finish the algorithm and not feed it more data.
-- On step 3, when we are forward filling timestamps, the time-difference stack is observed to see if the generated timestamp is still within the bounds of the rolling-window.
+  - The first observation, that initiates the algorithm will always be 0-valued;
+  - Given that the algorithm produces the statistics all the way until the next-observation, it means that the last statistic will not be calculated within normal iterations of the algorithm. This means that we "manually" flush the buffer at the end of the iteration, if we want to finish the algorithm and not feed it more data;
+- On step 3, when we are forward filling timestamps, the time-difference between iteration timestamp, and our `first` timestamp is checked to evaluate if our stack is still within bounds of the rolling-window. In case it's not, values are popped from the stack.
 
 The code is commented throughout, adding to this explanation.
 
@@ -195,6 +194,26 @@ Considerations & Optimizations:
 - We are upserting each row individually, of course, if done in bulk, DB interaction times will improve, and be faster;
 - Simplified interaction with DB with `psycopg2`. More advanced and complex DB models, could use `sqlalchemy` to manage relations.
 
+## Notes on Nix
+
+In this project there are some `*.nix` files. Nix is a new technology - a functional package manager. Nix is also a declarative language.
+It allows declaring a system-definition, with almost mathematical soundness. It is used in this project to manage development environment, and produces some files like `treefmt.yml` that belong to the development experience. Other files included in this:
+- `comb/QUEEN/devshells.nix`
+- `flake.nix`, `flake.lock`
+
+You can install the development environment by first installing Nix and then running the script `activate.sh`.
+It is not needed for running this project, and are personal files - Poetry manages the python dev environment, packaging and running the application.
 
 ## Conclusions
 
+A poetry aplication is packaged with a CLI that allows benchmarking moving-average calculation algorithm, with a `pandas` baseline. Code is documented and typed. Dependencies were used freely, but we could do away with `typer` for the CLI application.
+
+Furthermore, a simple service is implemented, by using Docker images to containerize the application.
+
+Websockets are used, which are preferrable in comparison to a simple API call, since we do not have to create a new-session at every request. A socket is opened, and is ready to receive streamed data. Each point is streamed singularly, and then the statistics are calculated server-side, while it is the server (and ingestor in this case), that holds the state of the algorithm.
+
+We do not validate event data when sending it to the server, due to increased overhead. It is assumed that data is validated before-hand, by the time it reaches our service.
+
+Due to oversimplification, some details are not polished, including:
+- CI/CD is wasteful, and runs on every push. While running package tests is useful on every commit (sometimes, and for small applications), building a Docker image at every turn is not. By separating development into two dev branches (staging and development), one could choose to only build Docker images on the staging step, before pushing to main;
+- As stated above, DB interaction is oversimplified, and only done to showcase how the system would behave;
