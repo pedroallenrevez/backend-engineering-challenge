@@ -36,7 +36,7 @@ class PSQLConnector:
         self.exe(PSQLConnector.UPSERT(ts, dur))
 
 
-psql = PSQLConnector()
-psql.create_db()
+#psql = PSQLConnector()
+#psql.create_db()
 # psql.test_insert()
 # psql.test_insert()

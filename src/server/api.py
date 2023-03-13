@@ -1,17 +1,19 @@
 import datetime
 import json
 
-from db import psql
+from db import PSQLConnector
 from fastapi import FastAPI, WebSocket
 
 from calc import SlidingWindow
 
 app = FastAPI()
+window = SlidingWindow(10)
 
 
 @app.get("/db_conn_test")
 async def test_db():
     try:
+        psql = PSQLConnector()
         psql.test_insert()
         psql.clear()
         return {"status": 200}
@@ -21,7 +23,7 @@ async def test_db():
 
 @app.websocket("/ws")
 async def websocket_create(websocket: WebSocket):
-    window = SlidingWindow(10)
+    psql = PSQLConnector()
     await websocket.accept()
     try:
         while True:
