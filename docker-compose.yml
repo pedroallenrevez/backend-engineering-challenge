@@ -3,23 +3,13 @@ version: '3'
 services:
   database:
     image: 'postgres:latest'
-    ports:
-      - 5432:5432
     env_file:
       - .env
-    networks:
-      - postgres-network
+    network_mode: "host"
     volumes:
       - ./db-data/:/var/lib/postgresql/data/
       - /var/run/postgresql:/var/run/postgresql
-      #- ./init.sql:/docker-entrypoint-initdb.d/init.sql
+        #- ./init.sql:/docker-entrypoint-initdb.d/init.sql
   backend:
     build: ./src/
-    ports:
-      - 8000:8000
-    networks:
-      - postgres-network
-
-networks: 
-  postgres-network:
-    driver: bridge
+    network_mode: "host"
