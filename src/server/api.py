@@ -20,6 +20,15 @@ async def test_db():
     except Exception as e:
         return {"status": 404, "message": str(e)}
 
+@app.get("/create_db")
+async def create_db():
+    try:
+        psql = PSQLConnector()
+        psql.create_db()
+        return {"status": 200}
+    except Exception as e:
+        return {"status": 404, "message": str(e)}
+
 
 @app.websocket("/ws")
 async def websocket_create(websocket: WebSocket):

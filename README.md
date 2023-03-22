@@ -81,6 +81,11 @@ docker-compose up
 ```
 (Depending on the version you use, the command might be `docker-compose up`)
 
+Create a database by making a call to the API method `create_db`
+```
+localhost:8000/create_db
+```
+
 Test the ingestion service:
 ```
 poetry run unbabel ingest
