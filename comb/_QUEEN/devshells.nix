@@ -19,32 +19,6 @@ in
       ];
       imports = [];
       packages = with nixpkgs; [
-        (vscode-with-extensions.override {
-          vscode = vscodium;
-          vscodeExtensions = with vscode-extensions;
-            []
-            ++
-            # When the extension is already available in the default extensions set.
-            [
-              yzhang.markdown-all-in-one
-              #editorconfig.editorconfig
-              vscodevim.vim
-              ms-toolsai.jupyter
-              ms-python.python
-              njpwerner.autodocstring
-              ms-pyright.pyright
-              jnoortheen.nix-ide # TODO: how to configure
-            ]
-            # Concise version from the vscode market place when not available in the default set.
-            ++ vscode-utils.extensionsFromVscodeMarketplace [
-              {
-                name = "gitlab-workflow";
-                publisher = "GitLab";
-                version = "3.56.0";
-                sha256 = "sha256-jWNX/S+cCgQmjRKCN9osffBlJJhrKa65yhTt1z5+8VQ=";
-              }
-            ];
-        })
         poetry
         (python310.withPackages
           (ps:
