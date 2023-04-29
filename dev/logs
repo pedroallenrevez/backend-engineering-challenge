@@ -1,0 +1,1437 @@
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Starting Grafana" logger=server version=7.5.7 commit=91de51771c branch=HEAD compiled=2021-05-17T19:16:45+0000
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Config loaded from" logger=settings file=/usr/share/grafana/conf/defaults.ini
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Config loaded from" logger=settings file=/etc/grafana/grafana.ini
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Config overridden from command line" logger=settings arg="default.paths.data=/var/lib/grafana"
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Config overridden from command line" logger=settings arg="default.paths.logs=/var/log/grafana"
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Config overridden from command line" logger=settings arg="default.paths.plugins=/var/lib/grafana/plugins"
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Config overridden from command line" logger=settings arg="default.paths.provisioning=/etc/grafana/provisioning"
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Config overridden from command line" logger=settings arg="default.log.mode=console"
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Config overridden from Environment variable" logger=settings var="GF_PATHS_DATA=/var/lib/grafana"
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Config overridden from Environment variable" logger=settings var="GF_PATHS_LOGS=/var/log/grafana"
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Config overridden from Environment variable" logger=settings var="GF_PATHS_PLUGINS=/var/lib/grafana/plugins"
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Config overridden from Environment variable" logger=settings var="GF_PATHS_PROVISIONING=/etc/grafana/provisioning"
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Path Home" logger=settings path=/usr/share/grafana
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Path Data" logger=settings path=/var/lib/grafana
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Path Logs" logger=settings path=/var/log/grafana
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Path Plugins" logger=settings path=/var/lib/grafana/plugins
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Path Provisioning" logger=settings path=/etc/grafana/provisioning
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="App mode production" logger=settings
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Starting DB migrations" logger=migrator
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="migrations completed" logger=migrator performed=0 skipped=279 duration=1.139954ms
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Starting plugin search" logger=plugins
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="Registering plugin" logger=plugins id=input
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.969928Z","queryType":"exponential_heatmap_bucket_data"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.970014Z","queryType":"linear_heatmap_bucket_data"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.970035Z","queryType":"random_walk"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.970046Z","queryType":"predictable_pulse"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.970061Z","queryType":"predictable_csv_wave"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.970071Z","queryType":"random_walk_table"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.970081Z","queryType":"slow_query"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.970096Z","queryType":"no_data_points"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.970110Z","queryType":"datapoints_outside_range"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.970828Z","queryType":"manual_entry"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.970938Z","queryType":"csv_metric_values"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.970976Z","queryType":"streaming_client"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.971011Z","queryType":"live"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.971059Z","queryType":"grafana_api"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.971100Z","queryType":"arrow"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.971138Z","queryType":"annotations"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.971179Z","queryType":"table_static"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.971215Z","queryType":"random_walk_with_error"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.971326Z","queryType":"server_error_500"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.971441Z","queryType":"logs"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type handler","@timestamp":"2023-04-28T12:48:33.971563Z","queryType":"node_graph"}
+grafana_1        | {"@level":"debug","@message":"datasource: registering query type fallback handler","@timestamp":"2023-04-28T12:48:33.971653Z"}
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=warn msg="[Deprecated] the datasource provisioning config is outdated. please upgrade" logger=provisioning.datasources filename=/etc/grafana/provisioning/datasources/prometheus-ds.yml
+grafana_1        | t=2023-04-28T12:48:33+0000 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+grafana_1        | t=2023-04-28T20:45:54+0000 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=162.216.150.242 time_ms=0 size=29 referer=
+grafana_1        | t=2023-04-29T05:11:52+0000 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=162.142.125.226 time_ms=0 size=29 referer=
+grafana_1        | t=2023-04-29T05:11:53+0000 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=162.142.125.226 time_ms=0 size=29 referer=
+grafana_1        | t=2023-04-29T05:11:53+0000 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=PRI path=* status=302 remote_addr=162.142.125.226 time_ms=0 size=0 referer=
+grafana_1        | t=2023-04-29T05:11:53+0000 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=PRI path=* status=302 remote_addr=162.142.125.226 time_ms=0 size=0 referer=
+grafana_1        | t=2023-04-29T05:11:54+0000 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/favicon.ico status=302 remote_addr=162.142.125.226 time_ms=0 size=29 referer=
+backend_1        | INFO:     Started server process [1]
+backend_1        | INFO:     Waiting for application startup.
+backend_1        | INFO:     Application startup complete.
+backend_1        | INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+database_1       | 
+database_1       | PostgreSQL Database directory appears to contain a database; Skipping initialization
+database_1       | 
+database_1       | 2023-04-28 12:48:33.822 UTC [1] LOG:  starting PostgreSQL 15.2 (Debian 15.2-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+database_1       | 2023-04-28 12:48:33.822 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+database_1       | 2023-04-28 12:48:33.822 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+database_1       | 2023-04-28 12:48:33.827 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+database_1       | 2023-04-28 12:48:33.832 UTC [29] LOG:  database system was shut down at 2023-04-28 12:45:59 UTC
+database_1       | 2023-04-28 12:48:33.837 UTC [1] LOG:  database system is ready to accept connections
+database_1       | 2023-04-28 12:53:33.931 UTC [27] LOG:  checkpoint starting: time
+database_1       | 2023-04-28 12:53:33.936 UTC [27] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.005 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB
+database_1       | 2023-04-28 15:04:01.655 UTC [303] FATAL:  unsupported frontend protocol 0.0: server supports 3.0 to 3.0
+database_1       | 2023-04-28 15:04:01.960 UTC [304] FATAL:  unsupported frontend protocol 255.255: server supports 3.0 to 3.0
+database_1       | 2023-04-28 15:04:02.264 UTC [305] FATAL:  no PostgreSQL user name specified in startup packet
+database_1       | 2023-04-28 18:14:30.886 UTC [688] FATAL:  unsupported frontend protocol 0.0: server supports 3.0 to 3.0
+database_1       | 2023-04-28 18:14:31.178 UTC [689] FATAL:  unsupported frontend protocol 255.255: server supports 3.0 to 3.0
+database_1       | 2023-04-28 18:14:31.407 UTC [690] FATAL:  no PostgreSQL user name specified in startup packet
+database_1       | 2023-04-28 20:31:18.432 UTC [964] LOG:  could not receive data from client: Connection reset by peer
+database_1       | 2023-04-28 20:32:56.586 UTC [968] LOG:  could not receive data from client: Connection reset by peer
+database_1       | 2023-04-29 01:02:51.309 UTC [1509] FATAL:  unsupported frontend protocol 0.0: server supports 3.0 to 3.0
+database_1       | 2023-04-29 01:02:51.609 UTC [1510] FATAL:  unsupported frontend protocol 255.255: server supports 3.0 to 3.0
+database_1       | 2023-04-29 01:02:51.910 UTC [1511] FATAL:  no PostgreSQL user name specified in startup packet
+database_1       | 2023-04-29 08:37:48.084 UTC [2420] LOG:  could not receive data from client: Connection reset by peer
+database_1       | 2023-04-29 08:57:42.288 UTC [2461] LOG:  could not receive data from client: Connection reset by peer
+database_1       | 2023-04-29 10:14:40.966 UTC [2617] LOG:  invalid length of startup packet
+database_1       | 2023-04-29 13:21:16.557 UTC [2991] FATAL:  expected SASL response, got message type 0
+database_1       | 2023-04-29 13:53:06.163 UTC [3054] LOG:  could not receive data from client: Connection reset by peer
+database_1       | 2023-04-29 13:57:23.441 UTC [3064] LOG:  could not receive data from client: Connection reset by peer
+database_1       | 2023-04-29 14:00:58.194 UTC [3076] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:58.194 UTC [3076] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:58.198 UTC [3073] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:58.198 UTC [3073] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:58.200 UTC [3079] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:58.200 UTC [3079] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:58.249 UTC [3077] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:58.249 UTC [3077] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:58.422 UTC [3078] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:58.422 UTC [3078] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.404 UTC [3083] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.404 UTC [3083] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.406 UTC [3080] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.406 UTC [3080] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.420 UTC [3084] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.420 UTC [3084] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.425 UTC [3085] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.425 UTC [3085] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.426 UTC [3082] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.426 UTC [3082] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.440 UTC [3088] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.440 UTC [3088] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.445 UTC [3090] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.445 UTC [3090] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.448 UTC [3089] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.448 UTC [3089] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.450 UTC [3087] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.450 UTC [3087] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.548 UTC [3091] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.548 UTC [3091] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.558 UTC [3074] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.558 UTC [3074] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.636 UTC [3075] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.636 UTC [3075] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:00:59.704 UTC [3092] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:00:59.704 UTC [3092] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:00.132 UTC [3093] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:00.132 UTC [3093] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:00.148 UTC [3081] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:00.148 UTC [3081] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:00.169 UTC [3094] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:00.169 UTC [3094] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:00.184 UTC [3086] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:00.184 UTC [3086] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.483 UTC [3101] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.483 UTC [3101] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.519 UTC [3095] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.519 UTC [3095] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.522 UTC [3108] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.522 UTC [3108] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.528 UTC [3105] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.528 UTC [3105] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.535 UTC [3109] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.535 UTC [3109] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.536 UTC [3103] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.536 UTC [3103] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.654 UTC [3096] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.654 UTC [3096] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.683 UTC [3112] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.683 UTC [3112] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.697 UTC [3110] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.697 UTC [3110] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.731 UTC [3115] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.731 UTC [3115] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.736 UTC [3114] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.736 UTC [3114] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.736 UTC [3097] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.736 UTC [3097] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:02.753 UTC [3111] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:02.753 UTC [3111] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:03.462 UTC [3117] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:03.462 UTC [3117] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:03.520 UTC [3100] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:03.520 UTC [3100] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:03.538 UTC [3099] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:03.538 UTC [3099] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:03.541 UTC [3098] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:03.541 UTC [3098] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:04.725 UTC [3118] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:04.725 UTC [3118] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.074 UTC [3120] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.074 UTC [3120] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.085 UTC [3119] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.085 UTC [3119] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.612 UTC [3107] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.612 UTC [3107] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.625 UTC [3121] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.625 UTC [3121] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.641 UTC [3106] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.641 UTC [3106] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.642 UTC [3102] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.642 UTC [3102] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.644 UTC [3125] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.644 UTC [3125] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.647 UTC [3104] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.647 UTC [3104] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.661 UTC [3129] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.661 UTC [3129] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.669 UTC [3123] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.669 UTC [3123] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.673 UTC [3122] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.673 UTC [3122] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.713 UTC [3124] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.713 UTC [3124] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.775 UTC [3128] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.775 UTC [3128] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.793 UTC [3130] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.793 UTC [3130] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.815 UTC [3132] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.815 UTC [3132] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.822 UTC [3116] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.822 UTC [3116] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.860 UTC [3137] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.860 UTC [3137] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.896 UTC [3134] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.896 UTC [3134] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.930 UTC [3144] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.930 UTC [3144] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.950 UTC [3136] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.950 UTC [3136] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:05.975 UTC [3133] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:05.975 UTC [3133] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:06.006 UTC [3126] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:06.006 UTC [3126] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:06.030 UTC [3138] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:06.030 UTC [3138] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:06.034 UTC [3139] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:06.034 UTC [3139] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:06.039 UTC [3131] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:06.039 UTC [3131] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:06.047 UTC [3145] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:06.047 UTC [3145] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:06.107 UTC [3135] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:06.107 UTC [3135] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:06.343 UTC [3147] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:06.343 UTC [3147] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:06.407 UTC [3146] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:06.407 UTC [3146] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:06.464 UTC [3141] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:06.464 UTC [3141] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:07.038 UTC [3140] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:07.038 UTC [3140] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:07.320 UTC [3148] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:07.320 UTC [3148] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:07.358 UTC [3142] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:07.358 UTC [3142] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:07.392 UTC [3143] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:07.392 UTC [3143] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:07.596 UTC [3150] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:07.596 UTC [3150] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:07.633 UTC [3151] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:07.633 UTC [3151] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:07.758 UTC [3152] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:07.758 UTC [3152] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:07.796 UTC [3149] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:07.796 UTC [3149] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:07.857 UTC [3153] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:07.857 UTC [3153] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:07.859 UTC [3154] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:07.859 UTC [3154] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:07.949 UTC [3156] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:07.949 UTC [3156] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:08.046 UTC [3158] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:08.046 UTC [3158] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:08.057 UTC [3157] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:08.057 UTC [3157] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:08.169 UTC [3159] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:08.169 UTC [3159] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:08.188 UTC [3161] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:08.188 UTC [3161] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:08.225 UTC [3162] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:08.225 UTC [3162] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:08.248 UTC [3163] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:08.248 UTC [3163] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:08.250 UTC [3160] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:08.250 UTC [3160] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:08.286 UTC [3164] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:08.286 UTC [3164] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+node_exporter    | ts=2023-04-29T16:28:37.963Z caller=node_exporter.go:180 level=info msg="Starting node_exporter" version="(version=1.5.0, branch=HEAD, revision=1b48970ffcf5630534fb00bb0687d73c66d1c959)"
+node_exporter    | ts=2023-04-29T16:28:37.963Z caller=node_exporter.go:181 level=info msg="Build context" build_context="(go=go1.19.3, user=root@6e7732a7b81b, date=20221129-18:59:09)"
+node_exporter    | ts=2023-04-29T16:28:37.967Z caller=diskstats_common.go:111 level=info collector=diskstats msg="Parsed flag --collector.diskstats.device-exclude" flag=^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+node_exporter    | ts=2023-04-29T16:28:37.967Z caller=diskstats_linux.go:264 level=error collector=diskstats msg="Failed to open directory, disabling udev device properties" path=/run/udev/data
+node_exporter    | ts=2023-04-29T16:28:37.967Z caller=filesystem_common.go:111 level=info collector=filesystem msg="Parsed flag --collector.filesystem.mount-points-exclude" flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+|var/lib/containers/storage/.+)($|/)
+node_exporter    | ts=2023-04-29T16:28:37.967Z caller=filesystem_common.go:113 level=info collector=filesystem msg="Parsed flag --collector.filesystem.fs-types-exclude" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:110 level=info msg="Enabled collectors"
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=arp
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=bcache
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=bonding
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=btrfs
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=conntrack
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=cpu
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=cpufreq
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=diskstats
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=dmi
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=edac
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=entropy
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=fibrechannel
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=filefd
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=filesystem
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=hwmon
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=infiniband
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=ipvs
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=loadavg
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=mdadm
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=meminfo
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=netclass
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=netdev
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=netstat
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=nfs
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=nfsd
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=nvme
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=os
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=powersupplyclass
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=pressure
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=rapl
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=schedstat
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=selinux
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=sockstat
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=softnet
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=stat
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=tapestats
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=textfile
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=thermal_zone
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=time
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=timex
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=udp_queues
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=uname
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=vmstat
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=xfs
+node_exporter    | ts=2023-04-29T16:28:37.968Z caller=node_exporter.go:117 level=info collector=zfs
+node_exporter    | ts=2023-04-29T16:28:37.969Z caller=node_exporter.go:201 level=error err="listen tcp :9100: bind: address already in use"
+node_exporter    | ts=2023-04-29T16:28:38.754Z caller=node_exporter.go:180 level=info msg="Starting node_exporter" version="(version=1.5.0, branch=HEAD, revision=1b48970ffcf5630534fb00bb0687d73c66d1c959)"
+node_exporter    | ts=2023-04-29T16:28:38.754Z caller=node_exporter.go:181 level=info msg="Build context" build_context="(go=go1.19.3, user=root@6e7732a7b81b, date=20221129-18:59:09)"
+node_exporter    | ts=2023-04-29T16:28:38.758Z caller=diskstats_common.go:111 level=info collector=diskstats msg="Parsed flag --collector.diskstats.device-exclude" flag=^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+node_exporter    | ts=2023-04-29T16:28:38.759Z caller=diskstats_linux.go:264 level=error collector=diskstats msg="Failed to open directory, disabling udev device properties" path=/run/udev/data
+node_exporter    | ts=2023-04-29T16:28:38.759Z caller=filesystem_common.go:111 level=info collector=filesystem msg="Parsed flag --collector.filesystem.mount-points-exclude" flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+|var/lib/containers/storage/.+)($|/)
+node_exporter    | ts=2023-04-29T16:28:38.759Z caller=filesystem_common.go:113 level=info collector=filesystem msg="Parsed flag --collector.filesystem.fs-types-exclude" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:110 level=info msg="Enabled collectors"
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=arp
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=bcache
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=bonding
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=btrfs
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=conntrack
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=cpu
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=cpufreq
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=diskstats
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=dmi
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=edac
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=entropy
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=fibrechannel
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=filefd
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=filesystem
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=hwmon
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=infiniband
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=ipvs
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=loadavg
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=mdadm
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=meminfo
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=netclass
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=netdev
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=netstat
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=nfs
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=nfsd
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=nvme
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=os
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=powersupplyclass
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=pressure
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=rapl
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=schedstat
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=selinux
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=sockstat
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=softnet
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=stat
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=tapestats
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=textfile
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=thermal_zone
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=time
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=timex
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=udp_queues
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=uname
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=vmstat
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=xfs
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:117 level=info collector=zfs
+node_exporter    | ts=2023-04-29T16:28:38.760Z caller=node_exporter.go:201 level=error err="listen tcp :9100: bind: address already in use"
+node_exporter    | ts=2023-04-29T16:28:40.660Z caller=node_exporter.go:180 level=info msg="Starting node_exporter" version="(version=1.5.0, branch=HEAD, revision=1b48970ffcf5630534fb00bb0687d73c66d1c959)"
+node_exporter    | ts=2023-04-29T16:28:40.660Z caller=node_exporter.go:181 level=info msg="Build context" build_context="(go=go1.19.3, user=root@6e7732a7b81b, date=20221129-18:59:09)"
+node_exporter    | ts=2023-04-29T16:28:40.664Z caller=filesystem_common.go:111 level=info collector=filesystem msg="Parsed flag --collector.filesystem.mount-points-exclude" flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+|var/lib/containers/storage/.+)($|/)
+node_exporter    | ts=2023-04-29T16:28:40.664Z caller=filesystem_common.go:113 level=info collector=filesystem msg="Parsed flag --collector.filesystem.fs-types-exclude" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+node_exporter    | ts=2023-04-29T16:28:40.664Z caller=diskstats_common.go:111 level=info collector=diskstats msg="Parsed flag --collector.diskstats.device-exclude" flag=^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+node_exporter    | ts=2023-04-29T16:28:40.664Z caller=diskstats_linux.go:264 level=error collector=diskstats msg="Failed to open directory, disabling udev device properties" path=/run/udev/data
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:110 level=info msg="Enabled collectors"
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=arp
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=bcache
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=bonding
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=btrfs
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=conntrack
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=cpu
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=cpufreq
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=diskstats
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=dmi
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=edac
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=entropy
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=fibrechannel
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=filefd
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=filesystem
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=hwmon
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=infiniband
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=ipvs
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=loadavg
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=mdadm
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=meminfo
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=netclass
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=netdev
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=netstat
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=nfs
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=nfsd
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=nvme
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=os
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=powersupplyclass
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=pressure
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=rapl
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=schedstat
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=selinux
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=sockstat
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=softnet
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=stat
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=tapestats
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=textfile
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=thermal_zone
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=time
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=timex
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=udp_queues
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=uname
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=vmstat
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=xfs
+node_exporter    | ts=2023-04-29T16:28:40.665Z caller=node_exporter.go:117 level=info collector=zfs
+node_exporter    | ts=2023-04-29T16:28:40.666Z caller=node_exporter.go:201 level=error err="listen tcp :9100: bind: address already in use"
+node_exporter    | ts=2023-04-29T16:28:41.896Z caller=node_exporter.go:180 level=info msg="Starting node_exporter" version="(version=1.5.0, branch=HEAD, revision=1b48970ffcf5630534fb00bb0687d73c66d1c959)"
+node_exporter    | ts=2023-04-29T16:28:41.896Z caller=node_exporter.go:181 level=info msg="Build context" build_context="(go=go1.19.3, user=root@6e7732a7b81b, date=20221129-18:59:09)"
+node_exporter    | ts=2023-04-29T16:28:41.945Z caller=diskstats_common.go:111 level=info collector=diskstats msg="Parsed flag --collector.diskstats.device-exclude" flag=^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+node_exporter    | ts=2023-04-29T16:28:41.946Z caller=diskstats_linux.go:264 level=error collector=diskstats msg="Failed to open directory, disabling udev device properties" path=/run/udev/data
+node_exporter    | ts=2023-04-29T16:28:41.946Z caller=filesystem_common.go:111 level=info collector=filesystem msg="Parsed flag --collector.filesystem.mount-points-exclude" flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+|var/lib/containers/storage/.+)($|/)
+node_exporter    | ts=2023-04-29T16:28:41.946Z caller=filesystem_common.go:113 level=info collector=filesystem msg="Parsed flag --collector.filesystem.fs-types-exclude" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:110 level=info msg="Enabled collectors"
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=arp
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=bcache
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=bonding
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=btrfs
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=conntrack
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=cpu
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=cpufreq
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=diskstats
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=dmi
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=edac
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=entropy
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=fibrechannel
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=filefd
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=filesystem
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=hwmon
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=infiniband
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=ipvs
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=loadavg
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=mdadm
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=meminfo
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=netclass
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=netdev
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=netstat
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=nfs
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=nfsd
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=nvme
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=os
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=powersupplyclass
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=pressure
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=rapl
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=schedstat
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=selinux
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=sockstat
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=softnet
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=stat
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=tapestats
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=textfile
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=thermal_zone
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=time
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=timex
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=udp_queues
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=uname
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=vmstat
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=xfs
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:117 level=info collector=zfs
+node_exporter    | ts=2023-04-29T16:28:41.947Z caller=node_exporter.go:201 level=error err="listen tcp :9100: bind: address already in use"
+node_exporter    | ts=2023-04-29T16:28:43.487Z caller=node_exporter.go:180 level=info msg="Starting node_exporter" version="(version=1.5.0, branch=HEAD, revision=1b48970ffcf5630534fb00bb0687d73c66d1c959)"
+node_exporter    | ts=2023-04-29T16:28:43.487Z caller=node_exporter.go:181 level=info msg="Build context" build_context="(go=go1.19.3, user=root@6e7732a7b81b, date=20221129-18:59:09)"
+node_exporter    | ts=2023-04-29T16:28:43.491Z caller=diskstats_common.go:111 level=info collector=diskstats msg="Parsed flag --collector.diskstats.device-exclude" flag=^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+node_exporter    | ts=2023-04-29T16:28:43.491Z caller=diskstats_linux.go:264 level=error collector=diskstats msg="Failed to open directory, disabling udev device properties" path=/run/udev/data
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=filesystem_common.go:111 level=info collector=filesystem msg="Parsed flag --collector.filesystem.mount-points-exclude" flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+|var/lib/containers/storage/.+)($|/)
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=filesystem_common.go:113 level=info collector=filesystem msg="Parsed flag --collector.filesystem.fs-types-exclude" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:110 level=info msg="Enabled collectors"
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=arp
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=bcache
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=bonding
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=btrfs
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=conntrack
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=cpu
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=cpufreq
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=diskstats
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=dmi
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=edac
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=entropy
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=fibrechannel
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=filefd
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=filesystem
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=hwmon
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=infiniband
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=ipvs
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=loadavg
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=mdadm
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=meminfo
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=netclass
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=netdev
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=netstat
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=nfs
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=nfsd
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=nvme
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=os
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=powersupplyclass
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=pressure
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=rapl
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=schedstat
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=selinux
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=sockstat
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=softnet
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=stat
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=tapestats
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=textfile
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=thermal_zone
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=time
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=timex
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=udp_queues
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=uname
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=vmstat
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=xfs
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:117 level=info collector=zfs
+node_exporter    | ts=2023-04-29T16:28:43.492Z caller=node_exporter.go:201 level=error err="listen tcp :9100: bind: address already in use"
+node_exporter    | ts=2023-04-29T16:28:46.348Z caller=node_exporter.go:180 level=info msg="Starting node_exporter" version="(version=1.5.0, branch=HEAD, revision=1b48970ffcf5630534fb00bb0687d73c66d1c959)"
+node_exporter    | ts=2023-04-29T16:28:46.348Z caller=node_exporter.go:181 level=info msg="Build context" build_context="(go=go1.19.3, user=root@6e7732a7b81b, date=20221129-18:59:09)"
+node_exporter    | ts=2023-04-29T16:28:46.355Z caller=filesystem_common.go:111 level=info collector=filesystem msg="Parsed flag --collector.filesystem.mount-points-exclude" flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+|var/lib/containers/storage/.+)($|/)
+node_exporter    | ts=2023-04-29T16:28:46.356Z caller=filesystem_common.go:113 level=info collector=filesystem msg="Parsed flag --collector.filesystem.fs-types-exclude" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+node_exporter    | ts=2023-04-29T16:28:46.356Z caller=diskstats_common.go:111 level=info collector=diskstats msg="Parsed flag --collector.diskstats.device-exclude" flag=^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+node_exporter    | ts=2023-04-29T16:28:46.356Z caller=diskstats_linux.go:264 level=error collector=diskstats msg="Failed to open directory, disabling udev device properties" path=/run/udev/data
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:110 level=info msg="Enabled collectors"
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=arp
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=bcache
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=bonding
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=btrfs
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=conntrack
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=cpu
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=cpufreq
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=diskstats
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=dmi
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=edac
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=entropy
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=fibrechannel
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=filefd
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=filesystem
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=hwmon
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=infiniband
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=ipvs
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=loadavg
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=mdadm
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=meminfo
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=netclass
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=netdev
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=netstat
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=nfs
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=nfsd
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=nvme
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=os
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=powersupplyclass
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=pressure
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=rapl
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=schedstat
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=selinux
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=sockstat
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=softnet
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=stat
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=tapestats
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=textfile
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=thermal_zone
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=time
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=timex
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=udp_queues
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=uname
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=vmstat
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=xfs
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:117 level=info collector=zfs
+node_exporter    | ts=2023-04-29T16:28:46.357Z caller=node_exporter.go:201 level=error err="listen tcp :9100: bind: address already in use"
+node_exporter    | ts=2023-04-29T16:28:50.992Z caller=node_exporter.go:180 level=info msg="Starting node_exporter" version="(version=1.5.0, branch=HEAD, revision=1b48970ffcf5630534fb00bb0687d73c66d1c959)"
+node_exporter    | ts=2023-04-29T16:28:50.992Z caller=node_exporter.go:181 level=info msg="Build context" build_context="(go=go1.19.3, user=root@6e7732a7b81b, date=20221129-18:59:09)"
+node_exporter    | ts=2023-04-29T16:28:50.994Z caller=diskstats_common.go:111 level=info collector=diskstats msg="Parsed flag --collector.diskstats.device-exclude" flag=^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+node_exporter    | ts=2023-04-29T16:28:50.994Z caller=diskstats_linux.go:264 level=error collector=diskstats msg="Failed to open directory, disabling udev device properties" path=/run/udev/data
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=filesystem_common.go:111 level=info collector=filesystem msg="Parsed flag --collector.filesystem.mount-points-exclude" flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+|var/lib/containers/storage/.+)($|/)
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=filesystem_common.go:113 level=info collector=filesystem msg="Parsed flag --collector.filesystem.fs-types-exclude" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:110 level=info msg="Enabled collectors"
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=arp
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=bcache
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=bonding
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=btrfs
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=conntrack
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=cpu
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=cpufreq
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=diskstats
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=dmi
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=edac
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=entropy
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=fibrechannel
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=filefd
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=filesystem
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=hwmon
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=infiniband
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=ipvs
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=loadavg
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=mdadm
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=meminfo
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=netclass
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=netdev
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=netstat
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=nfs
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=nfsd
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=nvme
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=os
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=powersupplyclass
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=pressure
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=rapl
+database_1       | 2023-04-29 14:01:08.924 UTC [3166] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:08.924 UTC [3166] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:08.952 UTC [3167] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:08.952 UTC [3167] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:08.986 UTC [3155] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:08.986 UTC [3155] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:08.990 UTC [3165] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:08.990 UTC [3165] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.050 UTC [3168] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.050 UTC [3168] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.121 UTC [3170] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.121 UTC [3170] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.127 UTC [3169] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.127 UTC [3169] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.152 UTC [3173] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.152 UTC [3173] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.164 UTC [3171] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.164 UTC [3171] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.238 UTC [3172] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.238 UTC [3172] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.299 UTC [3174] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.299 UTC [3174] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.346 UTC [3175] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.346 UTC [3175] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.537 UTC [3177] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.537 UTC [3177] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.544 UTC [3176] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.544 UTC [3176] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.544 UTC [3178] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.544 UTC [3178] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.597 UTC [3179] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.597 UTC [3179] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.605 UTC [3181] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.605 UTC [3181] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.621 UTC [3180] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.621 UTC [3180] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.780 UTC [3182] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.780 UTC [3182] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.835 UTC [3184] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.835 UTC [3184] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.934 UTC [3186] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.934 UTC [3186] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:09.937 UTC [3185] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:09.937 UTC [3185] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.045 UTC [3188] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:10.045 UTC [3188] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.072 UTC [3187] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:10.072 UTC [3187] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.113 UTC [3113] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:10.113 UTC [3113] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.240 UTC [3189] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:10.240 UTC [3189] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.294 UTC [3191] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:10.294 UTC [3191] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.351 UTC [3190] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:10.351 UTC [3190] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.435 UTC [3192] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:10.435 UTC [3192] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.439 UTC [3193] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:10.439 UTC [3193] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.554 UTC [3194] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:10.554 UTC [3194] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.584 UTC [3195] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:10.584 UTC [3195] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.730 UTC [3196] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:10.730 UTC [3196] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.824 UTC [3198] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:10.824 UTC [3198] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.904 UTC [3202] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:10.904 UTC [3202] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.940 UTC [3201] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:10.940 UTC [3201] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.954 UTC [3197] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:10.954 UTC [3197] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.978 UTC [3199] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:10.978 UTC [3199] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.993 UTC [3204] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:10.993 UTC [3204] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:10.994 UTC [3200] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:10.994 UTC [3200] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:11.036 UTC [3203] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:11.036 UTC [3203] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:11.059 UTC [3127] FATAL:  password authentication failed for user "postgres"
+database_1       | 2023-04-29 14:01:11.059 UTC [3127] DETAIL:  Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.300 UTC [3207] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.300 UTC [3207] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.343 UTC [3211] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.343 UTC [3211] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.346 UTC [3206] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.346 UTC [3206] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.359 UTC [3205] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.359 UTC [3205] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.413 UTC [3208] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.413 UTC [3208] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.467 UTC [3209] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.467 UTC [3209] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.499 UTC [3210] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.499 UTC [3210] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.636 UTC [3214] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.636 UTC [3214] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.663 UTC [3213] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.663 UTC [3213] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.721 UTC [3212] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.721 UTC [3212] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.813 UTC [3215] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.813 UTC [3215] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.843 UTC [3219] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.843 UTC [3219] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.845 UTC [3218] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.845 UTC [3218] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.870 UTC [3216] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.870 UTC [3216] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.878 UTC [3220] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.878 UTC [3220] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:12.915 UTC [3217] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:12.915 UTC [3217] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:13.129 UTC [3221] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:13.129 UTC [3221] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:13.951 UTC [3222] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:13.951 UTC [3222] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:13.956 UTC [3226] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:13.956 UTC [3226] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:13.976 UTC [3225] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:13.976 UTC [3225] DETAIL:  Role "pgsql" does not exist.
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=schedstat
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=selinux
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=sockstat
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=softnet
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=stat
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=tapestats
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=textfile
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=thermal_zone
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=time
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=timex
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=udp_queues
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=uname
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=vmstat
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=xfs
+node_exporter    | ts=2023-04-29T16:28:50.995Z caller=node_exporter.go:117 level=info collector=zfs
+node_exporter    | ts=2023-04-29T16:28:50.996Z caller=node_exporter.go:201 level=error err="listen tcp :9100: bind: address already in use"
+node_exporter    | ts=2023-04-29T16:28:58.546Z caller=node_exporter.go:180 level=info msg="Starting node_exporter" version="(version=1.5.0, branch=HEAD, revision=1b48970ffcf5630534fb00bb0687d73c66d1c959)"
+node_exporter    | ts=2023-04-29T16:28:58.546Z caller=node_exporter.go:181 level=info msg="Build context" build_context="(go=go1.19.3, user=root@6e7732a7b81b, date=20221129-18:59:09)"
+node_exporter    | ts=2023-04-29T16:28:58.553Z caller=filesystem_common.go:111 level=info collector=filesystem msg="Parsed flag --collector.filesystem.mount-points-exclude" flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+|var/lib/containers/storage/.+)($|/)
+node_exporter    | ts=2023-04-29T16:28:58.553Z caller=filesystem_common.go:113 level=info collector=filesystem msg="Parsed flag --collector.filesystem.fs-types-exclude" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=diskstats_common.go:111 level=info collector=diskstats msg="Parsed flag --collector.diskstats.device-exclude" flag=^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=diskstats_linux.go:264 level=error collector=diskstats msg="Failed to open directory, disabling udev device properties" path=/run/udev/data
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:110 level=info msg="Enabled collectors"
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=arp
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=bcache
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=bonding
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=btrfs
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=conntrack
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=cpu
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=cpufreq
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=diskstats
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=dmi
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=edac
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=entropy
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=fibrechannel
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=filefd
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=filesystem
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=hwmon
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=infiniband
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=ipvs
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=loadavg
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=mdadm
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=meminfo
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=netclass
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=netdev
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=netstat
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=nfs
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=nfsd
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=nvme
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=os
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=powersupplyclass
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=pressure
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=rapl
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=schedstat
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=selinux
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=sockstat
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=softnet
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=stat
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=tapestats
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=textfile
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=thermal_zone
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=time
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=timex
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=udp_queues
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=uname
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=vmstat
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=xfs
+node_exporter    | ts=2023-04-29T16:28:58.554Z caller=node_exporter.go:117 level=info collector=zfs
+node_exporter    | ts=2023-04-29T16:28:58.555Z caller=node_exporter.go:201 level=error err="listen tcp :9100: bind: address already in use"
+node_exporter    | ts=2023-04-29T16:29:12.756Z caller=node_exporter.go:180 level=info msg="Starting node_exporter" version="(version=1.5.0, branch=HEAD, revision=1b48970ffcf5630534fb00bb0687d73c66d1c959)"
+node_exporter    | ts=2023-04-29T16:29:12.756Z caller=node_exporter.go:181 level=info msg="Build context" build_context="(go=go1.19.3, user=root@6e7732a7b81b, date=20221129-18:59:09)"
+node_exporter    | ts=2023-04-29T16:29:12.762Z caller=filesystem_common.go:111 level=info collector=filesystem msg="Parsed flag --collector.filesystem.mount-points-exclude" flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+|var/lib/containers/storage/.+)($|/)
+node_exporter    | ts=2023-04-29T16:29:12.762Z caller=filesystem_common.go:113 level=info collector=filesystem msg="Parsed flag --collector.filesystem.fs-types-exclude" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+node_exporter    | ts=2023-04-29T16:29:12.762Z caller=diskstats_common.go:111 level=info collector=diskstats msg="Parsed flag --collector.diskstats.device-exclude" flag=^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+node_exporter    | ts=2023-04-29T16:29:12.762Z caller=diskstats_linux.go:264 level=error collector=diskstats msg="Failed to open directory, disabling udev device properties" path=/run/udev/data
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:110 level=info msg="Enabled collectors"
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=arp
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=bcache
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=bonding
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=btrfs
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=conntrack
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=cpu
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=cpufreq
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=diskstats
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=dmi
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=edac
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=entropy
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=fibrechannel
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=filefd
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=filesystem
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=hwmon
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=infiniband
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=ipvs
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=loadavg
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=mdadm
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=meminfo
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=netclass
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=netdev
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=netstat
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=nfs
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=nfsd
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=nvme
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=os
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=powersupplyclass
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=pressure
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=rapl
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=schedstat
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=selinux
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=sockstat
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=softnet
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=stat
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=tapestats
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=textfile
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=thermal_zone
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=time
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=timex
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=udp_queues
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=uname
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=vmstat
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=xfs
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:117 level=info collector=zfs
+node_exporter    | ts=2023-04-29T16:29:12.763Z caller=node_exporter.go:201 level=error err="listen tcp :9100: bind: address already in use"
+node_exporter    | ts=2023-04-29T16:29:39.752Z caller=node_exporter.go:180 level=info msg="Starting node_exporter" version="(version=1.5.0, branch=HEAD, revision=1b48970ffcf5630534fb00bb0687d73c66d1c959)"
+node_exporter    | ts=2023-04-29T16:29:39.752Z caller=node_exporter.go:181 level=info msg="Build context" build_context="(go=go1.19.3, user=root@6e7732a7b81b, date=20221129-18:59:09)"
+node_exporter    | ts=2023-04-29T16:29:39.753Z caller=diskstats_common.go:111 level=info collector=diskstats msg="Parsed flag --collector.diskstats.device-exclude" flag=^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+node_exporter    | ts=2023-04-29T16:29:39.753Z caller=diskstats_linux.go:264 level=error collector=diskstats msg="Failed to open directory, disabling udev device properties" path=/run/udev/data
+node_exporter    | ts=2023-04-29T16:29:39.753Z caller=filesystem_common.go:111 level=info collector=filesystem msg="Parsed flag --collector.filesystem.mount-points-exclude" flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+|var/lib/containers/storage/.+)($|/)
+node_exporter    | ts=2023-04-29T16:29:39.753Z caller=filesystem_common.go:113 level=info collector=filesystem msg="Parsed flag --collector.filesystem.fs-types-exclude" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:110 level=info msg="Enabled collectors"
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=arp
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=bcache
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=bonding
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=btrfs
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=conntrack
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=cpu
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=cpufreq
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=diskstats
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=dmi
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=edac
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=entropy
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=fibrechannel
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=filefd
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=filesystem
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=hwmon
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=infiniband
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=ipvs
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=loadavg
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=mdadm
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=meminfo
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=netclass
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=netdev
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=netstat
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=nfs
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=nfsd
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=nvme
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=os
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=powersupplyclass
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=pressure
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=rapl
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=schedstat
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=selinux
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=sockstat
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=softnet
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=stat
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=tapestats
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=textfile
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=thermal_zone
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=time
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=timex
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=udp_queues
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=uname
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=vmstat
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=xfs
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:117 level=info collector=zfs
+node_exporter    | ts=2023-04-29T16:29:39.754Z caller=node_exporter.go:201 level=error err="listen tcp :9100: bind: address already in use"
+node_exporter    | ts=2023-04-29T16:30:32.288Z caller=node_exporter.go:180 level=info msg="Starting node_exporter" version="(version=1.5.0, branch=HEAD, revision=1b48970ffcf5630534fb00bb0687d73c66d1c959)"
+node_exporter    | ts=2023-04-29T16:30:32.288Z caller=node_exporter.go:181 level=info msg="Build context" build_context="(go=go1.19.3, user=root@6e7732a7b81b, date=20221129-18:59:09)"
+node_exporter    | ts=2023-04-29T16:30:32.294Z caller=diskstats_common.go:111 level=info collector=diskstats msg="Parsed flag --collector.diskstats.device-exclude" flag=^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\d+n\d+p)\d+$
+node_exporter    | ts=2023-04-29T16:30:32.295Z caller=diskstats_linux.go:264 level=error collector=diskstats msg="Failed to open directory, disabling udev device properties" path=/run/udev/data
+node_exporter    | ts=2023-04-29T16:30:32.295Z caller=filesystem_common.go:111 level=info collector=filesystem msg="Parsed flag --collector.filesystem.mount-points-exclude" flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+|var/lib/containers/storage/.+)($|/)
+node_exporter    | ts=2023-04-29T16:30:32.295Z caller=filesystem_common.go:113 level=info collector=filesystem msg="Parsed flag --collector.filesystem.fs-types-exclude" flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$
+node_exporter    | ts=2023-04-29T16:30:32.295Z caller=node_exporter.go:110 level=info msg="Enabled collectors"
+node_exporter    | ts=2023-04-29T16:30:32.295Z caller=node_exporter.go:117 level=info collector=arp
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=bcache
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=bonding
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=btrfs
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=conntrack
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=cpu
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=cpufreq
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=diskstats
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=dmi
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=edac
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=entropy
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=fibrechannel
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=filefd
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=filesystem
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=hwmon
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=infiniband
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=ipvs
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=loadavg
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=mdadm
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=meminfo
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=netclass
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=netdev
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=netstat
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=nfs
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=nfsd
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=nvme
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=os
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=powersupplyclass
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=pressure
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=rapl
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=schedstat
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=selinux
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=sockstat
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=softnet
+node_exporter    | ts=2023-04-29T16:30:32.296Z caller=node_exporter.go:117 level=info collector=stat
+node_exporter    | ts=2023-04-29T16:30:32.345Z caller=node_exporter.go:117 level=info collector=tapestats
+node_exporter    | ts=2023-04-29T16:30:32.345Z caller=node_exporter.go:117 level=info collector=textfile
+node_exporter    | ts=2023-04-29T16:30:32.345Z caller=node_exporter.go:117 level=info collector=thermal_zone
+node_exporter    | ts=2023-04-29T16:30:32.345Z caller=node_exporter.go:117 level=info collector=time
+node_exporter    | ts=2023-04-29T16:30:32.345Z caller=node_exporter.go:117 level=info collector=timex
+node_exporter    | ts=2023-04-29T16:30:32.345Z caller=node_exporter.go:117 level=info collector=udp_queues
+node_exporter    | ts=2023-04-29T16:30:32.345Z caller=node_exporter.go:117 level=info collector=uname
+node_exporter    | ts=2023-04-29T16:30:32.345Z caller=node_exporter.go:117 level=info collector=vmstat
+node_exporter    | ts=2023-04-29T16:30:32.345Z caller=node_exporter.go:117 level=info collector=xfs
+node_exporter    | ts=2023-04-29T16:30:32.345Z caller=node_exporter.go:117 level=info collector=zfs
+node_exporter    | ts=2023-04-29T16:30:32.346Z caller=node_exporter.go:201 level=error err="listen tcp :9100: bind: address already in use"
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:14.048 UTC [3223] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:14.048 UTC [3223] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:14.069 UTC [3224] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:14.069 UTC [3224] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:14.086 UTC [3228] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:14.086 UTC [3228] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:14.593 UTC [3229] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:14.593 UTC [3229] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:15.048 UTC [3230] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:15.048 UTC [3230] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:15.301 UTC [3231] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:15.301 UTC [3231] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:15.692 UTC [3235] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:15.692 UTC [3235] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:15.767 UTC [3233] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:15.767 UTC [3233] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:15.769 UTC [3232] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:15.769 UTC [3232] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:15.814 UTC [3237] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:15.814 UTC [3237] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:15.849 UTC [3234] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:15.849 UTC [3234] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:15.866 UTC [3236] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:15.866 UTC [3236] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:15.910 UTC [3239] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:15.910 UTC [3239] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:15.992 UTC [3238] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:15.992 UTC [3238] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:16.059 UTC [3247] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:16.059 UTC [3247] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:16.164 UTC [3243] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:16.164 UTC [3243] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:17.073 UTC [3246] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:17.073 UTC [3246] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:17.103 UTC [3240] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:17.103 UTC [3240] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:17.139 UTC [3241] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:17.139 UTC [3241] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:17.157 UTC [3244] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:17.157 UTC [3244] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:17.225 UTC [3227] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:17.225 UTC [3227] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:17.277 UTC [3242] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:17.277 UTC [3242] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:17.293 UTC [3249] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:17.293 UTC [3249] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:17.320 UTC [3248] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:17.320 UTC [3248] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:17.341 UTC [3250] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:17.341 UTC [3250] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:18.105 UTC [3258] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:18.105 UTC [3258] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:18.107 UTC [3254] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:18.107 UTC [3254] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:18.119 UTC [3252] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:18.119 UTC [3252] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:18.198 UTC [3261] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:18.198 UTC [3261] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:18.202 UTC [3253] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:18.202 UTC [3253] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:18.220 UTC [3245] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:18.220 UTC [3245] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:18.242 UTC [3255] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:18.242 UTC [3255] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:18.246 UTC [3257] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:18.246 UTC [3257] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:18.248 UTC [3259] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:18.248 UTC [3259] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:18.297 UTC [3263] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:18.297 UTC [3263] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:18.363 UTC [3260] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:18.363 UTC [3260] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:19.758 UTC [3264] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:19.758 UTC [3264] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:19.781 UTC [3265] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:19.781 UTC [3265] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:20.459 UTC [3256] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:20.459 UTC [3256] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | 2023-04-29 14:01:20.650 UTC [3262] FATAL:  password authentication failed for user "pgsql"
+database_1       | 2023-04-29 14:01:20.650 UTC [3262] DETAIL:  Role "pgsql" does not exist.
+database_1       | 	Connection matched pg_hba.conf line 100: "host all all all scram-sha-256"
+database_1       | bash: line 2: pkill: command not found
+database_1       | bash: line 3: pkill: command not found
+database_1       | bash: line 4: pkill: command not found
+database_1       | chattr: No such file or directory while trying to stat /etc/ld.so.preload
+database_1       | chattr: No such file or directory while trying to stat /var/spool/cron
+database_1       | chattr: No such file or directory while trying to stat /etc/crontab
+database_1       | bash: line 9: ufw: command not found
+database_1       | bash: line 10: iptables: command not found
+database_1       | bash: line 11: /proc/sys/kernel/nmi_watchdog: Read-only file system
+database_1       | bash: line 12: /etc/sysctl.conf: Permission denied
+database_1       | bash: line 112: curl: command not found
+database_1       | bash: line 112: /usr/local/bin/curl: Permission denied
+database_1       | chmod: cannot access '/usr/local/bin/curl': No such file or directory
+database_1       | bash: line 113: /usr/local/bin/curl: No such file or directory
+database_1       | bash: line 114: /usr/local/bin/curl: No such file or directory
+database_1       | chmod: cannot access '/tmp/curl': No such file or directory
+database_1       | bash: line 117: /tmp/curl: No such file or directory
+database_1       | main: line 181: pkill: command not found
+database_1       | main: line 182: pkill: command not found
+database_1       | main: line 183: pkill: command not found
+database_1       | main: line 184: pkill: command not found
+database_1       | main: line 185: pkill: command not found
+database_1       | main: line 186: netstat: command not found
+database_1       | main: line 187: ps: command not found
+database_1       | main: line 188: ps: command not found
+database_1       | main: line 189: pkill: command not found
+database_1       | main: line 190: pkill: command not found
+database_1       | main: line 191: ps: command not found
+database_1       | main: line 192: ps: command not found
+database_1       | main: line 193: pkill: command not found
+database_1       | main: line 194: netstat: command not found
+database_1       | main: line 195: netstat: command not found
+database_1       | main: line 196: netstat: command not found
+database_1       | main: line 197: netstat: command not found
+database_1       | main: line 198: pkill: command not found
+database_1       | main: line 199: pkill: command not found
+database_1       | main: line 200: pkill: command not found
+database_1       | main: line 201: pkill: command not found
+database_1       | main: line 202: pkill: command not found
+database_1       | main: line 203: pkill: command not found
+database_1       | main: line 204: pkill: command not found
+database_1       | main: line 205: pkill: command not found
+database_1       | main: line 206: pkill: command not found
+database_1       | main: line 207: pkill: command not found
+database_1       | main: line 208: pkill: command not found
+database_1       | main: line 209: pkill: command not found
+database_1       | main: line 210: pkill: command not found
+database_1       | main: line 211: pkill: command not found
+database_1       | main: line 212: pkill: command not found
+database_1       | main: line 213: pkill: command not found
+database_1       | main: line 214: pkill: command not found
+database_1       | main: line 215: pkill: command not found
+database_1       | main: line 216: pkill: command not found
+database_1       | main: line 217: pkill: command not found
+database_1       | main: line 218: pkill: command not found
+database_1       | main: line 219: pkill: command not found
+database_1       | main: line 220: pkill: command not found
+database_1       | main: line 221: pkill: command not found
+database_1       | main: line 222: pkill: command not found
+database_1       | main: line 223: pkill: command not found
+database_1       | main: line 224: pkill: command not found
+database_1       | main: line 225: pkill: command not found
+database_1       | main: line 226: ps: command not found
+database_1       | cat: /tmp/.X11-unix/01: No such file or directory
+database_1       | cat: /tmp/.X11-unix/11: No such file or directory
+database_1       | cat: /tmp/.X11-unix/22: No such file or directory
+database_1       | cat: /tmp/.pg_stat.0: No such file or directory
+database_1       | cat: /tmp/.pg_stat.1: No such file or directory
+database_1       | cat: /var/lib/postgresql/data/./oka.pid: No such file or directory
+database_1       | main: line 233: pkill: command not found
+database_1       | main: line 234: pkill: command not found
+database_1       | main: line 235: pkill: command not found
+database_1       | main: line 236: pkill: command not found
+database_1       | main: line 237: pkill: command not found
+database_1       | main: line 238: pkill: command not found
+database_1       | main: line 239: pkill: command not found
+database_1       | main: line 240: ps: command not found
+database_1       | main: line 241: ps: command not found
+database_1       | main: line 242: ps: command not found
+database_1       | main: line 243: ps: command not found
+database_1       | main: line 244: ps: command not found
+database_1       | main: line 245: ps: command not found
+database_1       | md5sum: /tmp/kinsing: No such file or directory
+database_1       | /tmp/kinsing is not 2c44b4e4706b8bd95d1866d7867efa0e, actual 
+database_1       | chmod: cannot access '/tmp/kinsing': No such file or directory
+database_1       |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+database_1       |                                  Dload  Upload   Total   Spent    Left  Speed
+100 6168k  100 6168k    0     0  4365k      0  0:00:01  0:00:01 --:--:-- 4368k
+database_1       | /tmp/kinsing is 2c44b4e4706b8bd95d1866d7867efa0e
+database_1       | md5sum: /tmp/libsystem.so: No such file or directory
+database_1       | /tmp/libsystem.so is not ccef46c7edf9131ccffc47bd69eb743b, actual 
+database_1       | chmod: cannot access '/tmp/libsystem.so': No such file or directory
+database_1       |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+database_1       |                                  Dload  Upload   Total   Spent    Left  Speed
+100 26800  100 26800    0     0  23612      0  0:00:01  0:00:01 --:--:-- 23612
+database_1       | /tmp/libsystem.so is ccef46c7edf9131ccffc47bd69eb743b
+database_1       |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+database_1       |                                  Dload  Upload   Total   Spent    Left  Speed
+100 26800  100 26800    0     0  10387      0  0:00:02  0:00:02 --:--:-- 10383
+database_1       | /tmp/libsystem.so is ccef46c7edf9131ccffc47bd69eb743b
+database_1       | main: line 276: /etc/ld.so.preload: Permission denied
+database_1       | main: line 280: crontab: command not found
+database_1       | main: line 280: crontab: command not found
+database_1       | main: line 281: crontab: command not found
+database_1       | main: line 281: crontab: command not found
+database_1       | main: line 282: crontab: command not found
+database_1       | main: line 282: crontab: command not found
+database_1       | main: line 283: crontab: command not found
+database_1       | main: line 283: crontab: command not found
+database_1       | main: line 284: crontab: command not found
+database_1       | main: line 284: crontab: command not found
+database_1       | main: line 285: crontab: command not found
+database_1       | main: line 285: crontab: command not found
+database_1       | main: line 286: crontab: command not found
+database_1       | main: line 286: crontab: command not found
+database_1       | main: line 287: crontab: command not found
+database_1       | main: line 287: crontab: command not found
+database_1       | main: line 288: crontab: command not found
+database_1       | main: line 288: crontab: command not found
+database_1       | main: line 289: crontab: command not found
+database_1       | main: line 289: crontab: command not found
+database_1       | main: line 290: crontab: command not found
+database_1       | main: line 290: crontab: command not found
+database_1       | main: line 291: crontab: command not found
+database_1       | main: line 291: crontab: command not found
+database_1       | main: line 292: crontab: command not found
+database_1       | main: line 292: crontab: command not found
+database_1       | main: line 293: crontab: command not found
+database_1       | main: line 293: crontab: command not found
+database_1       | main: line 294: crontab: command not found
+database_1       | main: line 294: crontab: command not found
+database_1       | main: line 295: crontab: command not found
+database_1       | main: line 295: crontab: command not found
+database_1       | main: line 296: crontab: command not found
+database_1       | main: line 296: crontab: command not found
+database_1       | main: line 297: crontab: command not found
+database_1       | main: line 297: crontab: command not found
+database_1       | main: line 298: crontab: command not found
+database_1       | main: line 298: crontab: command not found
+database_1       | main: line 299: crontab: command not found
+database_1       | main: line 299: crontab: command not found
+database_1       | main: line 300: crontab: command not found
+database_1       | main: line 300: crontab: command not found
+database_1       | main: line 301: crontab: command not found
+database_1       | main: line 301: crontab: command not found
+database_1       | main: line 302: crontab: command not found
+database_1       | main: line 302: crontab: command not found
+database_1       | main: line 303: crontab: command not found
+database_1       | main: line 303: crontab: command not found
+database_1       | main: line 304: crontab: command not found
+database_1       | main: line 304: crontab: command not found
+database_1       | main: line 305: crontab: command not found
+database_1       | main: line 305: crontab: command not found
+database_1       | main: line 306: crontab: command not found
+database_1       | main: line 306: crontab: command not found
+database_1       | main: line 307: crontab: command not found
+database_1       | main: line 307: crontab: command not found
+database_1       | main: line 308: crontab: command not found
+database_1       | main: line 308: crontab: command not found
+database_1       | main: line 309: crontab: command not found
+database_1       | main: line 309: crontab: command not found
+database_1       | main: line 310: crontab: command not found
+database_1       | main: line 310: crontab: command not found
+database_1       | main: line 311: crontab: command not found
+database_1       | main: line 311: crontab: command not found
+database_1       | main: line 312: crontab: command not found
+database_1       | main: line 312: crontab: command not found
+database_1       | main: line 313: crontab: command not found
+database_1       | main: line 313: crontab: command not found
+database_1       | main: line 314: crontab: command not found
+database_1       | main: line 314: crontab: command not found
+database_1       | main: line 315: crontab: command not found
+database_1       | main: line 315: crontab: command not found
+database_1       | main: line 316: crontab: command not found
+database_1       | main: line 316: crontab: command not found
+database_1       | main: line 317: crontab: command not found
+database_1       | main: line 317: crontab: command not found
+database_1       | main: line 318: crontab: command not found
+database_1       | main: line 318: crontab: command not found
+database_1       | main: line 319: crontab: command not found
+database_1       | main: line 319: crontab: command not found
+database_1       | main: line 320: crontab: command not found
+database_1       | main: line 320: crontab: command not found
+database_1       | main: line 321: crontab: command not found
+database_1       | main: line 321: crontab: command not found
+database_1       | main: line 322: crontab: command not found
+database_1       | main: line 322: crontab: command not found
+database_1       | main: line 323: crontab: command not found
+database_1       | main: line 323: crontab: command not found
+database_1       | main: line 324: crontab: command not found
+database_1       | main: line 324: crontab: command not found
+database_1       | main: line 325: crontab: command not found
+database_1       | main: line 325: crontab: command not found
+database_1       | main: line 326: crontab: command not found
+database_1       | main: line 326: crontab: command not found
+database_1       | main: line 327: crontab: command not found
+database_1       | main: line 327: crontab: command not found
+database_1       | main: line 328: crontab: command not found
+database_1       | main: line 328: crontab: command not found
+database_1       | main: line 329: crontab: command not found
+database_1       | main: line 329: crontab: command not found
+database_1       | main: line 330: crontab: command not found
+database_1       | main: line 330: crontab: command not found
+database_1       | main: line 331: crontab: command not found
+database_1       | main: line 331: crontab: command not found
+database_1       | main: line 332: crontab: command not found
+database_1       | main: line 332: crontab: command not found
+database_1       | main: line 333: crontab: command not found
+database_1       | main: line 333: crontab: command not found
+database_1       | main: line 334: crontab: command not found
+database_1       | main: line 334: crontab: command not found
+database_1       | main: line 335: crontab: command not found
+database_1       | main: line 335: crontab: command not found
+database_1       | main: line 336: crontab: command not found
+database_1       | main: line 336: crontab: command not found
+database_1       | main: line 337: crontab: command not found
+database_1       | main: line 337: crontab: command not found
+database_1       | main: line 338: crontab: command not found
+database_1       | main: line 338: crontab: command not found
+database_1       | main: line 339: crontab: command not found
+database_1       | main: line 339: crontab: command not found
+database_1       | main: line 340: crontab: command not found
+database_1       | main: line 340: crontab: command not found
+database_1       | bash: line 384: crontab: command not found
+database_1       | bash: line 391: crontab: command not found
+database_1       | 2023-04-29 14:03:56.794 UTC [27] LOG:  checkpoint starting: time
+database_1       | 2023-04-29 14:03:59.848 UTC [27] LOG:  checkpoint complete: wrote 30 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.999 s, sync=0.053 s, total=3.054 s; sync files=25, longest=0.050 s, average=0.003 s; distance=128 kB, estimate=128 kB
+database_1       | 2023-04-29 14:26:46.463 UTC [4228] LOG:  invalid length of startup packet
+prometheus_1     | ts=2023-04-28T12:48:33.617Z caller=main.go:491 level=info msg="No time or size retention was set so using the default time retention" duration=15d
+prometheus_1     | ts=2023-04-28T12:48:33.617Z caller=main.go:535 level=info msg="Starting Prometheus Server" mode=server version="(version=2.36.2, branch=HEAD, revision=d7e7b8e04b5ecdc1dd153534ba376a622b72741b)"
+prometheus_1     | ts=2023-04-28T12:48:33.617Z caller=main.go:540 level=info build_context="(go=go1.18.3, user=root@f051ce0d6050, date=20220620-13:21:35)"
+prometheus_1     | ts=2023-04-28T12:48:33.617Z caller=main.go:541 level=info host_details="(Linux 5.10.0-21-amd64 #1 SMP Debian 5.10.162-1 (2023-01-21) x86_64 9587221194b5 (none))"
+prometheus_1     | ts=2023-04-28T12:48:33.617Z caller=main.go:542 level=info fd_limits="(soft=1048576, hard=1048576)"
+prometheus_1     | ts=2023-04-28T12:48:33.617Z caller=main.go:543 level=info vm_limits="(soft=unlimited, hard=unlimited)"
+prometheus_1     | ts=2023-04-28T12:48:33.619Z caller=web.go:553 level=info component=web msg="Start listening for connections" address=0.0.0.0:9090
+prometheus_1     | ts=2023-04-28T12:48:33.620Z caller=main.go:972 level=info msg="Starting TSDB ..."
+prometheus_1     | ts=2023-04-28T12:48:33.620Z caller=repair.go:56 level=info component=tsdb msg="Found healthy block" mint=1682607043895 maxt=1682611200000 ulid=01GZ3P3F4F64QFHH8JMF2APAJC
+prometheus_1     | ts=2023-04-28T12:48:33.622Z caller=tls_config.go:195 level=info component=web msg="TLS is disabled." http2=false
+prometheus_1     | ts=2023-04-28T12:48:33.627Z caller=head.go:493 level=info component=tsdb msg="Replaying on-disk memory mappable chunks if any"
+prometheus_1     | ts=2023-04-28T12:48:33.628Z caller=head.go:536 level=info component=tsdb msg="On-disk memory mappable chunks replay completed" duration=1.111459ms
+prometheus_1     | ts=2023-04-28T12:48:33.628Z caller=head.go:542 level=info component=tsdb msg="Replaying WAL, this may take a while"
+prometheus_1     | ts=2023-04-28T12:48:33.821Z caller=head_wal.go:337 level=warn component=tsdb msg="Unknown series references" samples=285701 exemplars=0
+prometheus_1     | ts=2023-04-28T12:48:33.821Z caller=head.go:578 level=info component=tsdb msg="WAL checkpoint loaded"
+prometheus_1     | ts=2023-04-28T12:48:33.822Z caller=head.go:613 level=info component=tsdb msg="WAL segment loaded" segment=13 maxSegment=16
+prometheus_1     | ts=2023-04-28T12:48:33.823Z caller=head.go:613 level=info component=tsdb msg="WAL segment loaded" segment=14 maxSegment=16
+prometheus_1     | ts=2023-04-28T12:48:33.828Z caller=head.go:613 level=info component=tsdb msg="WAL segment loaded" segment=15 maxSegment=16
+prometheus_1     | ts=2023-04-28T12:48:33.828Z caller=head.go:613 level=info component=tsdb msg="WAL segment loaded" segment=16 maxSegment=16
+prometheus_1     | ts=2023-04-28T12:48:33.828Z caller=head.go:619 level=info component=tsdb msg="WAL replay completed" checkpoint_replay_duration=193.142965ms wal_replay_duration=7.097833ms total_replay_duration=201.4471ms
+prometheus_1     | ts=2023-04-28T12:48:33.830Z caller=main.go:993 level=info fs_type=EXT4_SUPER_MAGIC
+prometheus_1     | ts=2023-04-28T12:48:33.830Z caller=main.go:996 level=info msg="TSDB started"
+prometheus_1     | ts=2023-04-28T12:48:33.830Z caller=main.go:1177 level=info msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
+prometheus_1     | ts=2023-04-28T12:48:33.831Z caller=main.go:1214 level=info msg="Completed loading of configuration file" filename=/etc/prometheus/prometheus.yml totalDuration=558.655µs db_storage=1.122µs remote_storage=1.613µs web_handler=440ns query_engine=1.012µs scrape=205.732µs scrape_sd=43.573µs notify=1.364µs notify_sd=1.613µs rules=1.292µs tracing=8.165µs
+prometheus_1     | ts=2023-04-28T12:48:33.831Z caller=main.go:957 level=info msg="Server is ready to receive web requests."
+prometheus_1     | ts=2023-04-28T12:48:33.831Z caller=manager.go:937 level=info component="rule manager" msg="Starting rule manager..."
+prometheus_1     | ts=2023-04-28T12:48:39.479Z caller=compact.go:510 level=info component=tsdb msg="write block resulted in empty block" mint=1682611200000 maxt=1682618400000 duration=11.964142ms
+prometheus_1     | ts=2023-04-28T12:48:39.480Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.146456ms
+prometheus_1     | ts=2023-04-28T12:48:39.481Z caller=checkpoint.go:97 level=info component=tsdb msg="Creating checkpoint" from_segment=13 to_segment=14 mint=1682618400000
+prometheus_1     | ts=2023-04-28T12:48:39.561Z caller=head.go:1009 level=info component=tsdb msg="WAL checkpoint complete" first=13 last=14 duration=80.752591ms
+prometheus_1     | ts=2023-04-28T13:21:24.497Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682677283981 maxt=1682683200000 ulid=01GZ40D2FMDZ073H6VNX44PFVA duration=29.78164ms
+prometheus_1     | ts=2023-04-28T13:21:24.499Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=982.112µs
+prometheus_1     | ts=2023-04-28T15:00:04.503Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682683201222 maxt=1682690400000 ulid=01GZ461QQMCAW7AYFN8K2GT9W6 duration=34.793367ms
+prometheus_1     | ts=2023-04-28T15:00:04.504Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.192103ms
+prometheus_1     | ts=2023-04-28T15:00:04.505Z caller=checkpoint.go:97 level=info component=tsdb msg="Creating checkpoint" from_segment=15 to_segment=16 mint=1682690400000
+prometheus_1     | ts=2023-04-28T15:00:04.529Z caller=head.go:1009 level=info component=tsdb msg="WAL checkpoint complete" first=15 last=16 duration=24.194469ms
+prometheus_1     | ts=2023-04-28T17:00:04.504Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682690400579 maxt=1682697600000 ulid=01GZ4CXEZMVH7ZXV8WVVWR7MXR duration=36.523147ms
+prometheus_1     | ts=2023-04-28T17:00:04.506Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.031366ms
+prometheus_1     | ts=2023-04-28T19:00:04.496Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682697600579 maxt=1682704800000 ulid=01GZ4KS67MK0X3HVKWCXNMJ2QD duration=28.034293ms
+prometheus_1     | ts=2023-04-28T19:00:04.497Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=971.612µs
+prometheus_1     | ts=2023-04-28T19:00:04.498Z caller=checkpoint.go:97 level=info component=tsdb msg="Creating checkpoint" from_segment=17 to_segment=18 mint=1682704800000
+prometheus_1     | ts=2023-04-28T19:00:04.528Z caller=head.go:1009 level=info component=tsdb msg="WAL checkpoint complete" first=17 last=18 duration=30.546403ms
+prometheus_1     | ts=2023-04-28T21:00:04.497Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682704800579 maxt=1682712000000 ulid=01GZ4TMXFKWQSQ13VZ3ED0663V duration=29.714893ms
+prometheus_1     | ts=2023-04-28T21:00:04.498Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.04879ms
+prometheus_1     | ts=2023-04-28T23:00:04.506Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682712000579 maxt=1682719200000 ulid=01GZ51GMQKFVRJ99J2EY5PJJ2G duration=39.615612ms
+prometheus_1     | ts=2023-04-28T23:00:04.508Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.106509ms
+prometheus_1     | ts=2023-04-28T23:00:04.509Z caller=checkpoint.go:97 level=info component=tsdb msg="Creating checkpoint" from_segment=19 to_segment=20 mint=1682719200000
+prometheus_1     | ts=2023-04-28T23:00:04.552Z caller=head.go:1009 level=info component=tsdb msg="WAL checkpoint complete" first=19 last=20 duration=43.417009ms
+prometheus_1     | ts=2023-04-28T23:00:04.597Z caller=compact.go:460 level=info component=tsdb msg="compact blocks" count=3 mint=1682683201222 maxt=1682704800000 ulid=01GZ51GMT95B75CG9AWRE7T1S9 sources="[01GZ461QQMCAW7AYFN8K2GT9W6 01GZ4CXEZMVH7ZXV8WVVWR7MXR 01GZ4KS67MK0X3HVKWCXNMJ2QD]" duration=44.28715ms
+prometheus_1     | ts=2023-04-28T23:00:04.598Z caller=db.go:1292 level=info component=tsdb msg="Deleting obsolete block" block=01GZ461QQMCAW7AYFN8K2GT9W6
+prometheus_1     | ts=2023-04-28T23:00:04.599Z caller=db.go:1292 level=info component=tsdb msg="Deleting obsolete block" block=01GZ4CXEZMVH7ZXV8WVVWR7MXR
+prometheus_1     | ts=2023-04-28T23:00:04.600Z caller=db.go:1292 level=info component=tsdb msg="Deleting obsolete block" block=01GZ4KS67MK0X3HVKWCXNMJ2QD
+prometheus_1     | ts=2023-04-29T01:00:04.511Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682719200579 maxt=1682726400000 ulid=01GZ58CBZKW1GM0Y0Q84ER8JYA duration=44.244022ms
+prometheus_1     | ts=2023-04-29T01:00:04.513Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.313585ms
+prometheus_1     | ts=2023-04-29T03:00:04.503Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682726400579 maxt=1682733600000 ulid=01GZ5F837MNZ5AWJVHTJWS6938 duration=34.934977ms
+prometheus_1     | ts=2023-04-29T03:00:04.504Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=958.907µs
+prometheus_1     | ts=2023-04-29T03:00:04.505Z caller=checkpoint.go:97 level=info component=tsdb msg="Creating checkpoint" from_segment=21 to_segment=22 mint=1682733600000
+prometheus_1     | ts=2023-04-29T03:00:04.553Z caller=head.go:1009 level=info component=tsdb msg="WAL checkpoint complete" first=21 last=22 duration=48.274879ms
+prometheus_1     | ts=2023-04-29T05:00:04.496Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682733600579 maxt=1682740800000 ulid=01GZ5P3TFM6DHYN93G7FADMA5W duration=28.341567ms
+prometheus_1     | ts=2023-04-29T05:00:04.498Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.169209ms
+prometheus_1     | ts=2023-04-29T05:00:04.586Z caller=compact.go:460 level=info component=tsdb msg="compact blocks" count=3 mint=1682704800579 maxt=1682726400000 ulid=01GZ5P3TGJX9S195E0F1ATK6BR sources="[01GZ4TMXFKWQSQ13VZ3ED0663V 01GZ51GMQKFVRJ99J2EY5PJJ2G 01GZ58CBZKW1GM0Y0Q84ER8JYA]" duration=87.775925ms
+prometheus_1     | ts=2023-04-29T05:00:04.588Z caller=db.go:1292 level=info component=tsdb msg="Deleting obsolete block" block=01GZ4TMXFKWQSQ13VZ3ED0663V
+prometheus_1     | ts=2023-04-29T05:00:04.588Z caller=db.go:1292 level=info component=tsdb msg="Deleting obsolete block" block=01GZ51GMQKFVRJ99J2EY5PJJ2G
+prometheus_1     | ts=2023-04-29T05:00:04.589Z caller=db.go:1292 level=info component=tsdb msg="Deleting obsolete block" block=01GZ58CBZKW1GM0Y0Q84ER8JYA
+prometheus_1     | ts=2023-04-29T05:00:04.632Z caller=compact.go:460 level=info component=tsdb msg="compact blocks" count=3 mint=1682677283981 maxt=1682726400000 ulid=01GZ5P3TKEH4T492EF137K4CM0 sources="[01GZ40D2FMDZ073H6VNX44PFVA 01GZ51GMT95B75CG9AWRE7T1S9 01GZ5P3TGJX9S195E0F1ATK6BR]" duration=42.202304ms
+prometheus_1     | ts=2023-04-29T05:00:04.633Z caller=db.go:1292 level=info component=tsdb msg="Deleting obsolete block" block=01GZ40D2FMDZ073H6VNX44PFVA
+prometheus_1     | ts=2023-04-29T05:00:04.634Z caller=db.go:1292 level=info component=tsdb msg="Deleting obsolete block" block=01GZ5P3TGJX9S195E0F1ATK6BR
+prometheus_1     | ts=2023-04-29T05:00:04.635Z caller=db.go:1292 level=info component=tsdb msg="Deleting obsolete block" block=01GZ51GMT95B75CG9AWRE7T1S9
+prometheus_1     | ts=2023-04-29T07:00:04.499Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682740800579 maxt=1682748000000 ulid=01GZ5WZHQKXMGFPTVQD7DM91F0 duration=31.816193ms
+prometheus_1     | ts=2023-04-29T07:00:04.500Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.039472ms
+prometheus_1     | ts=2023-04-29T07:00:04.501Z caller=checkpoint.go:97 level=info component=tsdb msg="Creating checkpoint" from_segment=23 to_segment=24 mint=1682748000000
+prometheus_1     | ts=2023-04-29T07:00:04.550Z caller=head.go:1009 level=info component=tsdb msg="WAL checkpoint complete" first=23 last=24 duration=49.728836ms
+prometheus_1     | ts=2023-04-29T09:00:04.497Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682748000579 maxt=1682755200000 ulid=01GZ63V8ZKW0K79TW3FYVNK97M duration=29.529305ms
+prometheus_1     | ts=2023-04-29T09:00:04.498Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.109785ms
+prometheus_1     | ts=2023-04-29T11:00:04.500Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682755200579 maxt=1682762400000 ulid=01GZ6AQ07KJC1RNPYJAQ0RMKS9 duration=32.123533ms
+prometheus_1     | ts=2023-04-29T11:00:04.501Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.122761ms
+prometheus_1     | ts=2023-04-29T11:00:04.502Z caller=checkpoint.go:97 level=info component=tsdb msg="Creating checkpoint" from_segment=25 to_segment=26 mint=1682762400000
+prometheus_1     | ts=2023-04-29T11:00:04.559Z caller=head.go:1009 level=info component=tsdb msg="WAL checkpoint complete" first=25 last=26 duration=57.301692ms
+prometheus_1     | ts=2023-04-29T11:00:04.599Z caller=compact.go:460 level=info component=tsdb msg="compact blocks" count=3 mint=1682726400579 maxt=1682748000000 ulid=01GZ6AQ0AFMF9PJNSYZJC1SEEZ sources="[01GZ5F837MNZ5AWJVHTJWS6938 01GZ5P3TFM6DHYN93G7FADMA5W 01GZ5WZHQKXMGFPTVQD7DM91F0]" duration=39.974353ms
+prometheus_1     | ts=2023-04-29T11:00:04.600Z caller=db.go:1292 level=info component=tsdb msg="Deleting obsolete block" block=01GZ5F837MNZ5AWJVHTJWS6938
+prometheus_1     | ts=2023-04-29T11:00:04.601Z caller=db.go:1292 level=info component=tsdb msg="Deleting obsolete block" block=01GZ5P3TFM6DHYN93G7FADMA5W
+prometheus_1     | ts=2023-04-29T11:00:04.602Z caller=db.go:1292 level=info component=tsdb msg="Deleting obsolete block" block=01GZ5WZHQKXMGFPTVQD7DM91F0
+prometheus_1     | ts=2023-04-29T13:00:04.499Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682762400579 maxt=1682769600000 ulid=01GZ6HJQFMG1A14A68JS2YET2M duration=31.394023ms
+prometheus_1     | ts=2023-04-29T13:00:04.501Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.47356ms
+prometheus_1     | ts=2023-04-29T15:00:04.771Z caller=compact.go:519 level=info component=tsdb msg="write block" mint=1682769600579 maxt=1682776800000 ulid=01GZ6REEQMACKM0TJNJBQ84A80 duration=303.040305ms
+prometheus_1     | ts=2023-04-29T15:00:04.773Z caller=head.go:840 level=info component=tsdb msg="Head GC completed" duration=1.205899ms
+prometheus_1     | ts=2023-04-29T15:00:04.774Z caller=checkpoint.go:97 level=info component=tsdb msg="Creating checkpoint" from_segment=27 to_segment=28 mint=1682776800000
+prometheus_1     | ts=2023-04-29T15:00:04.889Z caller=head.go:1009 level=info component=tsdb msg="WAL checkpoint complete" first=27 last=28 duration=115.755891ms
+
