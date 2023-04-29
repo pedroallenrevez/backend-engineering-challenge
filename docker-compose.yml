@@ -5,11 +5,72 @@ services:
     image: 'postgres:latest'
     env_file:
       - .env
-    network_mode: "host"
+    #network_mode: "host"
+    ports:
+      - 5432:5432
     volumes:
       - ./db-data/:/var/lib/postgresql/data/
       - /var/run/postgresql:/var/run/postgresql
         #- ./init.sql:/docker-entrypoint-initdb.d/init.sql
   backend:
     build: ./src/
-    network_mode: "host"
+    #network_mode: "host"
+    ports:
+      - 8000:8000
+  grafana:
+    image: grafana/grafana:7.5.7
+    ports:
+      - 3030:3000
+    restart: unless-stopped
+    volumes:
+      - ./services/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - grafana-data:/var/lib/grafana
+  prometheus:
+    image: prom/prometheus:v2.36.2
+    volumes:
+      - ./services/prometheus/:/etc/prometheus/
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    ports:
+      - 9090:9090
+        #links:
+        #  - cadvisor:cadvisor
+        #  - alertmanager:alertmanager
+        #networks:
+        #- back-tier
+    restart: always
+  node_exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: node_exporter
+    command:
+      - '--path.rootfs=/host'
+    network_mode: host
+    pid: host
+    restart: unless-stopped
+    volumes:
+      - '/:/host:ro,rslave'
+
+      #alertmanager:
+      #  image: prom/alertmanager
+      #  ports:
+      #    - 9093:9093
+      #  volumes:
+      #    - ./alertmanager/:/etc/alertmanager/
+      #      #networks:
+      #      #- back-tier
+      #  restart: always
+      #  command:
+      #    - '--config.file=/etc/alertmanager/config.yml'
+      #    - '--storage.path=/alertmanager'
+#    deploy:
+#      placement:
+#        constraints:
+#          - node.hostname == ${HOSTNAME}
+
+volumes:
+  grafana-data: {}
+  prometheus-data: {}
