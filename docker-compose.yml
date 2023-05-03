@@ -18,13 +18,17 @@ services:
     ports:
       - 8000:8000
   grafana:
-    image: grafana/grafana:7.5.7
-    ports:
-      - 3030:3000
+    image: grafana/grafana:latest
+    #ports:
+    #  - 3030:3000
+    network_mode: host
     restart: unless-stopped
     volumes:
-      - ./services/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ./services/grafana/provisioning:/etc/grafana/provisioning
+      - ./services/grafana/dashboards:/var/lib/grafana/dashboards
       - grafana-data:/var/lib/grafana
+    environment:
+      DS_THEMIS: "Prometheus"
   prometheus:
     image: prom/prometheus:v2.36.2
     volumes:
@@ -35,8 +39,9 @@ services:
       - '--storage.tsdb.path=/prometheus'
       - '--web.console.libraries=/usr/share/prometheus/console_libraries'
       - '--web.console.templates=/usr/share/prometheus/consoles'
-    ports:
-      - 9090:9090
+    network_mode: host
+    #ports:
+    #  - 9090:9090
         #links:
         #  - cadvisor:cadvisor
         #  - alertmanager:alertmanager
