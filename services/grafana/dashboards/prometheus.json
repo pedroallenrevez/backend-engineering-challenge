@@ -211,11 +211,7 @@
               "decimals": 2,
               "link": false,
               "pattern": "instance",
-              "thresholds": [
-                "",
-                "",
-                ""
-              ],
+              "thresholds": ["", "", ""],
               "type": "string",
               "unit": "short"
             }
@@ -3019,17 +3015,7 @@
       "2h",
       "1d"
     ],
-    "time_options": [
-      "5m",
-      "15m",
-      "1h",
-      "6h",
-      "12h",
-      "24h",
-      "2d",
-      "7d",
-      "30d"
-    ]
+    "time_options": ["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"]
   },
   "timezone": "",
   "title": "Prometheus 2.0 Overview",
